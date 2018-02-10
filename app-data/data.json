@@ -1,0 +1,89 @@
+[
+    {
+        "user" : "root",
+        "password" : "root",
+        "projects" : [
+            {
+                "name" : "Tasks app",
+                "panels" : [
+    
+                    {
+                        "title": "Open",
+                        "tasks" : [
+    
+                            {
+                                "title" : "Study AngularJS",
+                                "done" : false
+                            }
+                        ]
+                    },
+    
+                    {
+                        "title": "In progress",
+                        "tasks" : [
+                            {
+                                "title" : "Think about JSON",
+                                "done" : false
+                            }
+                        ]
+                    },
+    
+                    {
+                        "title": "Done",
+                        "tasks" : [
+                            {
+                            "title" : "Show JSON with AngularJS",
+                            "done" : true
+                            }
+                        ]
+
+                    }
+                
+                ]
+            }
+        ]
+    },
+
+    {
+        "user" : "Maria",
+        "password" : "maria",
+        "projects" : [
+            {
+                "name" : "Other project",
+                "panels" : [
+    
+                    {
+                        "title": "Open",
+                        "tasks" : [
+    
+                            {
+                                "title" : "Study AngularJS",
+                                "done" : false
+                            }
+                        ]
+                    },
+    
+                    {
+                        "title": "In progress",
+                        "tasks" : [
+                            {
+                                "title" : "Think about JSON",
+                                "done" : false
+                            }
+                        ]
+                    },
+    
+                    {
+                        "title": "Done",
+                        "tasks" : []
+                    }
+                
+                ]
+            }
+        ]
+    }
+]
+
+
+
+
