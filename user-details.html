@@ -1,0 +1,20 @@
+<div class="card" ng-repeat="users in data">
+    <div class="card-body">
+        <h5 class="card-title">{{users.user}}</h5>
+        <ul>
+            <li ng-repeat="projects in users.projects">
+                {{projects.name}}
+                <ul>
+                    <li ng-repeat="panels in projects.panels">
+                        {{panels.title}}
+                        <ul class="list-unstyled">
+                            <li ng-repeat="task in panels.tasks">
+                                <label class="done-{{task.done}}">{{task.title}}</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
