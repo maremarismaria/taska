@@ -1,0 +1,10 @@
+body{
+    /*https://pixabay.com/es/escritorio-notas-cuaderno-%C3%A1lbum-2906792/*/
+    /*https://pixabay.com/p-801921/?no_redirect*/
+    background-image: url('../images/desk.png');
+}
+
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
