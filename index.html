@@ -12,30 +12,12 @@
 
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand">Taska</a>
-        <button type="button" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-primary" ng-click="showButton()">Sign in</button>
     </nav>
+
     
-    <div class="card" ng-repeat="users in data">
-        <div class="card-body">
-            <h5 class="card-title">{{users.user}}</h5>
-            <ul>
-                <li ng-repeat="projects in users.projects">
-                    {{projects.name}}
-                    <ul>
-                        <li ng-repeat="panels in projects.panels">
-                            {{panels.title}}
-                            <ul class="list-unstyled">
-                                <li ng-repeat="task in panels.tasks">
-                                    <label class="done-{{task.done}}">{{task.title}}</label>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
+    <user-details></user-details>
+
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
