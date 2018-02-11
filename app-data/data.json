@@ -1,7 +1,7 @@
 [
     {
-        "user" : "root",
-        "password" : "root",
+        "user" : "Maria",
+        "password" : "maria",
         "projects" : [
             {
                 "name" : "Tasks app",
@@ -14,6 +14,15 @@
                             {
                                 "title" : "Study AngularJS",
                                 "done" : false
+                            },
+
+                            {
+                                "title" : "Understand AngularJS",
+                                "done" : false
+                            },
+                            {
+                                "title" : "Cry using AngularJS",
+                                "done" : false
                             }
                         ]
                     },
@@ -21,8 +30,14 @@
                     {
                         "title": "In progress",
                         "tasks" : [
+                            
                             {
-                                "title" : "Think about JSON",
+                                "title" : "Use Bootstrap",
+                                "done" : false
+                            },
+
+                            {
+                                "title" : "Test AngularJS",
                                 "done" : false
                             }
                         ]
@@ -32,52 +47,17 @@
                         "title": "Done",
                         "tasks" : [
                             {
-                            "title" : "Show JSON with AngularJS",
-                            "done" : true
+                                "title" : "Show JSON with AngularJS",
+                                "done" : true
+                            },
+
+                            {
+                                "title" : "Use a Bootstrap Modal",
+                                "done" : true
                             }
                         ]
 
-                    }
-                
-                ]
-            }
-        ]
-    },
-
-    {
-        "user" : "Maria",
-        "password" : "maria",
-        "projects" : [
-            {
-                "name" : "Other project",
-                "panels" : [
-    
-                    {
-                        "title": "Open",
-                        "tasks" : [
-    
-                            {
-                                "title" : "Study AngularJS",
-                                "done" : false
-                            }
-                        ]
-                    },
-    
-                    {
-                        "title": "In progress",
-                        "tasks" : [
-                            {
-                                "title" : "Think about JSON",
-                                "done" : false
-                            }
-                        ]
-                    },
-    
-                    {
-                        "title": "Done",
-                        "tasks" : []
-                    }
-                
+                    }                
                 ]
             }
         ]
