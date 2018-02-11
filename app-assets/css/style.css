@@ -1,9 +1,12 @@
 body{
     /*https://pixabay.com/es/escritorio-notas-cuaderno-%C3%A1lbum-2906792/*/
     /*https://pixabay.com/p-801921/?no_redirect*/
-    background-image: url('../images/desk.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*
+        background-image: url('../images/desk.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    */
+    background-color: #F4CD68;
 }
 
 .done-true {
