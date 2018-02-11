@@ -3,61 +3,38 @@
 
     var app = angular.module('taskApp', []);
 
-    app.controller('mainController', function($scope, $http){
+    app.controller('MainController', ['$http', function ($http){
         
-        /*
-        $http.get("app-data/data.json").then(function(response) {
-            $scope.data = response.data;
+        var main = this;
+        main.users = [];
+
+        $http.get("app-data/data.json").success(function(data){
+            main.users = data;
         });
 
-        
-        $scope.visibility = false;
-        $scope.showButton = function() {
-            $scope.visibility = !$scope.visibility;
-        }
-        */
+        console.log(main)
 
-    });
+    }]);
 
-    app.directive("userDetails", function(){
+    app.directive("projectDetails", function(){
+
         return {
             restrict : 'E',
-            templateUrl : "app-views/user-details.view.html",
-            controller: function($scope, $http){
-
-                $scope.showUserData = false;
-
-                $http.get("app-data/data.json").then(function(response) {
-                    $scope.data = response.data;
-                });
-            }
+            templateUrl : "app-views/project-details.view.html"
         };
     });
 
     app.directive("login", function(){
         return {
             restrict : 'E',
-            templateUrl : "app-views/login-view.html",
-            controller: function($scope, $http){
+            templateUrl : "app-views/login.view.html"
+        };
+    });
 
-                $scope.showLogin = true;
-
-                $scope.login = function(){
-
-                    $http.get("app-data/data.json").then(function(response) {
-                                                
-                        angular.forEach(response.data, function(value, key){
-
-                            if(value.user == $scope.username && value.password == $scope.password){
-                                console.log("LOGIN");
-                                $scope.showLogin = false;
-                                $scope.showUserData = true;
-                            }
-                    
-                        });
-                    });
-                };
-            }
+    app.directive("newTask", function(){
+        return {
+            restrict : 'E',
+            templateUrl : "app-views/new-task.view.html"
         };
     });
 
