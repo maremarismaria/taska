@@ -1,10 +1,10 @@
 
-<div class="container-fluid" ng-repeat="user in main.users">
-    <div class="row" ng-repeat="projects in user.projects">
+<div class="container-fluid">
+    <div class="row" ng-repeat="projects in main.users.projects">
         <div class="col-sm p-2" ng-repeat="panels in projects.panels">
             <div class="card bg-light">
 
-                <h5 class="card-header">{{panels.title}}</h5>
+                <h5 class="card-header">{{panels.title}} ({{panels.tasks.length}}) </h5>
                 <div class="card-body">
 
                     <div class="form-check" ng-repeat="task in panels.tasks">
