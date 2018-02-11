@@ -10,15 +10,9 @@
 </head>
 <body ng-controller="MainController as main">
 
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Taska</span>
-        <span class="navbar-brand">{{main.users[0].user}}</span>
-        <new-task></new-task>
-    </nav>
-       
+    <nav-bar></nav-bar>
     <project-details></project-details>
     
-
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

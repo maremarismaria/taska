@@ -12,22 +12,21 @@
             main.users = data;
         });
 
-        console.log(main)
+        console.log(main);
 
     }]);
 
-    app.directive("projectDetails", function(){
-
+    app.directive("navBar", function(){
         return {
             restrict : 'E',
-            templateUrl : "app-views/project-details.view.html"
+            templateUrl : "app-views/nav-bar.view.html"
         };
     });
 
-    app.directive("login", function(){
+    app.directive("newProject", function(){
         return {
             restrict : 'E',
-            templateUrl : "app-views/login.view.html"
+            templateUrl : "app-views/new-project.view.html"
         };
     });
 
@@ -37,5 +36,22 @@
             templateUrl : "app-views/new-task.view.html"
         };
     });
+
+    app.directive("projectDetails", function(){
+
+        return {
+            restrict : 'E',
+            templateUrl : "app-views/project-details.view.html"
+        };
+    });
+
+
+    //not in use
+    app.directive("login", function(){
+        return {
+            restrict : 'E',
+            templateUrl : "app-views/login.view.html"
+        };
+    });   
 
 })();

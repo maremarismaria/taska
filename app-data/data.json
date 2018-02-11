@@ -1,68 +1,67 @@
-[
-    {
-        "user" : "Maria",
-        "password" : "maria",
-        "projects" : [
-            {
-                "name" : "Tasks app",
-                "panels" : [
-    
-                    {
-                        "title": "Open",
-                        "tasks" : [
-    
-                            {
-                                "title" : "Study AngularJS",
-                                "done" : false
-                            },
+{
+    "user" : "Maria",
+    "password" : "maria",
+    "projects" : [
+        {
+            "name" : "Tasks app",
+            "panels" : [
 
-                            {
-                                "title" : "Understand AngularJS",
-                                "done" : false
-                            },
-                            {
-                                "title" : "Cry using AngularJS",
-                                "done" : false
-                            }
-                        ]
-                    },
-    
-                    {
-                        "title": "In progress",
-                        "tasks" : [
-                            
-                            {
-                                "title" : "Use Bootstrap",
-                                "done" : false
-                            },
+                {
+                    "title": "Open",
+                    "tasks" : [
 
-                            {
-                                "title" : "Test AngularJS",
-                                "done" : false
-                            }
-                        ]
-                    },
-    
-                    {
-                        "title": "Done",
-                        "tasks" : [
-                            {
-                                "title" : "Show JSON with AngularJS",
-                                "done" : true
-                            },
+                        {
+                            "title" : "Study AngularJS",
+                            "done" : false
+                        },
 
-                            {
-                                "title" : "Use a Bootstrap Modal",
-                                "done" : true
-                            }
-                        ]
+                        {
+                            "title" : "Understand AngularJS",
+                            "done" : false
+                        },
+                        {
+                            "title" : "Cry using AngularJS",
+                            "done" : false
+                        }
+                    ]
+                },
 
-                    }                
-                ]
-            }
-        ]
-    }
-]
+                {
+                    "title": "In progress",
+                    "tasks" : [
+                        
+                        {
+                            "title" : "Use Bootstrap",
+                            "done" : false
+                        },
+
+                        {
+                            "title" : "Test AngularJS",
+                            "done" : false
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Done",
+                    "tasks" : [
+                        {
+                            "title" : "Show JSON with AngularJS",
+                            "done" : true
+                        },
+
+                        {
+                            "title" : "Use a Bootstrap Modal",
+                            "done" : true
+                        }
+                    ]
+
+                }                
+            ]
+        }
+    ]
+}
+
 
 
 
