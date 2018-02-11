@@ -22,14 +22,14 @@
                 <div class="form-group">
                     <label for="selectPanel">Select project:</label>
                     <select class="form-control" id="selectProject">
-                        <option ng-repeat="project in main.users[0].projects">{{project.name}}</option>
+                        <option ng-repeat="project in main.users.projects">{{project.name}}</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
                     <label for="selectPanel">Select panel:</label>
                     <select class="form-control" id="selectPanel">
-                        <option ng-repeat="panel in main.users[0].projects[0].panels">{{panel.title}}</option>
+                        <option ng-repeat="panel in main.users.projects[0].panels">{{panel.title}}</option>
                     </select>
                 </div>
 
