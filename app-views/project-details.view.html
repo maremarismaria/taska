@@ -1,0 +1,21 @@
+
+<div class="container-fluid" ng-repeat="user in main.users">
+    <div class="row" ng-repeat="projects in user.projects">
+        <div class="col-sm p-2" ng-repeat="panels in projects.panels">
+            <div class="card bg-light">
+
+                <h5 class="card-header">{{panels.title}}</h5>
+                <div class="card-body">
+
+                    <div class="form-check" ng-repeat="task in panels.tasks">
+                        <input class="form-check-input" type="checkbox" value="{{task.done}}" ng-model="task.done">
+                        <label class="form-check-label done-{{task.done}}">{{task.title}}</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
