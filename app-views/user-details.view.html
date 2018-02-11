@@ -1,0 +1,19 @@
+<div ng-show="showUserData">
+    <div class="container" ng-repeat="users in data">
+        <div class="row" ng-repeat="projects in users.projects">
+            <div class="col-sm" ng-repeat="panels in projects.panels">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{panels.title}}</h5>
+                        <ul class="list-unstyled">
+                            <li ng-repeat="task in panels.tasks">
+                                <label class="done-{{task.done}}">{{task.title}}</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
