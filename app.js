@@ -29,5 +29,28 @@
             }
         };
     });
-    
+
+    app.directive("login", function(){
+        return {
+            restrict : 'E',
+            templateUrl : "app-views/login-view.html",
+            controller: function($scope, $http){
+                
+                $scope.login = function(){
+
+                    $http.get("app-data/data.json").then(function(response) {
+                                                
+                        angular.forEach(response.data, function(value, key){
+
+                            if(value.user == $scope.username && value.password == $scope.password){
+                                console.log("LOGIN");
+                            }
+                    
+                        });
+                    });
+                };
+            }
+        };
+    });
+
 })();
