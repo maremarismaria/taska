@@ -1,8 +1,37 @@
-<nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1">Taska</span>
-    <span class="navbar-brand">{{main.users.user}}</span>
-    <span>
-        <new-project></new-project>
-        <new-task></new-task>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Brand -->
+    <span class="navbar-brand mb-0 h1">
+        <!-- 
+            Icon created by Designmodo, under Creative Commons (Attribution 3.0 Unported) 
+            URL: https://www.iconfinder.com/icons/102547/colors_document_edit_pen_pencil_write_icon#size=200 
+        -->
+        <img src="app-assets/images/pencil-colors.png" width="30" height="30" class="d-inline-block align-top" alt=""> Taska
     </span>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Username & Available Projects -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="navbar-text">{{main.data.user}}</a>
+            </li>
+        </ul>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <select class="form-control bg-dark text-white" 
+                        ng-model="main.currentProject" 
+                        ng-options="project as project.name for project in main.data.projects"
+                        ng-change="main.getSelectedProject()">
+                </select>
+            </div>
+        </form>
+
+    </div>
+
 </nav>

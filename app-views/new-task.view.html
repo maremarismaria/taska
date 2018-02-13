@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newTaskForm">New Task</button>
+<button type="button" class="btn btn-primary btn-block lateral-buttons" data-toggle="modal" data-target="#newTaskForm">New Task</button>
 
 <!-- Modal -->
 <div class="modal fade" id="newTaskForm" tabindex="-1" role="dialog" aria-hidden="true">
@@ -16,20 +16,13 @@
 
                 <div class="form-group">
                     <label for="title">Task title:</label>
-                    <input type="text" class="form-control" placeholder="Title">
+                    <input type="text" class="form-control" placeholder="Type your task title here">
                 </div>
 
                 <div class="form-group">
-                    <label for="selectPanel">Select project:</label>
-                    <select class="form-control" id="selectProject">
-                        <option ng-repeat="project in main.users.projects">{{project.name}}</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
                     <label for="selectPanel">Select panel:</label>
                     <select class="form-control" id="selectPanel">
-                        <option ng-repeat="panel in main.users.projects[0].panels">{{panel.title}}</option>
+                        <option ng-repeat="panel in main.data.projects[0].panels">{{panel.title}}</option>
                     </select>
                 </div>
 

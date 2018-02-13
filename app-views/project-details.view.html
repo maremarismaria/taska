@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
-    <div class="row" ng-repeat="projects in main.users.projects">
-        <div class="col-sm p-2" ng-repeat="panels in projects.panels">
+    <div class="row">
+        <div class="col-sm p-2" ng-repeat="panels in main.getSelectedProject()">
             <div class="card bg-light">
 
                 <h5 class="card-header">{{panels.title}} ({{panels.tasks.length}}) </h5>
