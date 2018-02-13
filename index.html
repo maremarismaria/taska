@@ -11,7 +11,19 @@
 <body ng-controller="MainController as main">
 
     <nav-bar></nav-bar>
-    <project-details></project-details>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 lateral-nav">
+                <new-project></new-project>
+                <new-panel></new-panel>
+                <new-task></new-task>
+            </div>
+            <div class="col-lg-10">
+                <project-details></project-details>
+            </div>
+        </div>    
+    </div>
     
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
