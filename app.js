@@ -8,15 +8,35 @@
         var main = this;
         main.data = [];
 
-        //To manage current project
+        //current project and panels
         main.currentProject = [];
-
-        main.getFirstProject = function () {
-            return main.project[0].panels;
-        }
-        main.getSelectedProject = function() {
+        main.getPanelsFromSelectedProject = function() {
             return main.currentProject.panels;
         };
+
+        //new project
+        main.newProjectName = "";
+        main.newProject = { name : "", panels : [] };
+        main.addProject = function(){
+            main.newProject.name = main.newProjectName;
+            console.log(main.newProject);
+        };
+
+        //new panel
+        main.newPanelName = "";
+        main.newPanel = { title : "", tasks : [] };
+        main.addPanel = function(){
+            main.newPanel.title = main.newPanelName;
+            console.log(main.newPanel);
+        };
+
+        //new task
+        main.newTaskTitle = "";
+        main.newTask = { title : "", done : false };
+        main.addTask = function(){
+            main.newTask.title = main.newTaskTitle;
+            console.log(main.newTask);
+        }
        
         $http.get("app-data/data.json")
 
