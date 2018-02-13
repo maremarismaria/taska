@@ -58,6 +58,32 @@
 
                 }                
             ]
+        },
+
+        {
+            "name" : "Other project",
+            "panels" : [
+
+                {
+                    "title": "Random",
+                    "tasks" : [
+
+                        {
+                            "title" : "Something else",
+                            "done" : false
+                        },
+
+                        {
+                            "title" : "Foo",
+                            "done" : false
+                        },
+                        {
+                            "title" : "Other task",
+                            "done" : true
+                        }
+                    ]
+                }                
+            ]
         }
     ]
 }
