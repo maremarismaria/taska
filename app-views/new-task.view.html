@@ -13,14 +13,6 @@
                 <label for="title">Task title:</label>
                 <input type="text" class="form-control" placeholder="Type your task title here" ng-model="main.newTaskTitle">
             </div>
-
-            <div class="form-group">
-                <select class="form-control" 
-                        ng-model="main.currentPanel" 
-                        ng-options="panel as panel.title for panel in main.getSelectedProject().panels"
-                        ng-change="main.getSelectedPanel()">
-                </select>
-            </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

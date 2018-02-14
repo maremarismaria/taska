@@ -18,50 +18,57 @@
 
         //current panel
         main.currentPanel = [];
-        main.getSelectedPanel = function(){
-            return main.currentPanel;
+        main.setCurrentPanel = function (panel){
+            main.currentPanel = panel;
+        }
+
+        //delete panel
+        main.deletePanel = function(panel){
+            main.currentProject.panels.splice(main.currentProject.panels.indexOf(panel), 1);
+        };
+
+        //delete task
+        main.deleteTask = function(panel, task){
+            panel.tasks.splice(panel.tasks.indexOf(task), 1);
         };
 
         //new project
         main.newProjectName = "";
         main.newProject = { name : "", panels : [] };
         main.addProject = function(){
-            main.newProject.name = main.newProjectName;
-            console.log(main.newProject);
-            main.data.projects.push(main.newProject);
-            main.newProject = { name : "", panels : [] };
+            if(main.newProjectName != ""){
+                main.newProject.name = main.newProjectName;
+                console.log(main.newProject);
+                main.data.projects.push(main.newProject);
+                main.newProject = { name : "", panels : [] };
+            }
         };
 
         //new panel
         main.newPanelName = "";
         main.newPanel = { title : "", tasks : [] };
         main.addPanel = function(){
-            main.newPanel.title = main.newPanelName;
-            console.log(main.newPanel);
-            main.currentProject.panels.push(main.newPanel);
-            main.newPanel = { title : "", tasks : [] };
+            if(main.newPanelName != ""){
+                main.newPanel.title = main.newPanelName;
+                console.log(main.newPanel);
+                main.currentProject.panels.push(main.newPanel);
+                main.newPanel = { title : "", tasks : [] };
+            }
         };
 
         //new task
         main.newTaskTitle = "";
         main.newTask = { title : "", done : false };
         main.addTask = function(){
-            main.newTask.title = main.newTaskTitle;
-            console.log(main.currentPanel);
-            console.log(main.newTask);
-            main.currentPanel.tasks.push(main.newTask);
-            main.newTask = { title : "", done : false };
+            if(main.newTaskTitle != ""){
+                main.newTask.title = main.newTaskTitle;
+                console.log(main.currentPanel);
+                console.log(main.newTask);
+                main.currentPanel.tasks.push(main.newTask);
+                main.newTask = { title : "", done : false };
+            }
         }
 
-        //edit panel
-        main.editPanel = function(panel){
-            console.log(panel);
-        }
-
-        //edit task
-        main.editTask = function(task){
-            console.log(task);
-        };
         
         //Retrieving data from JSON file
         $http.get("app-data/data.json")

@@ -1,12 +1,12 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Brand -->
-    <span class="navbar-brand mb-0 h1">
+    <span class="navbar-brand mb-0 h1 navbar-brand-custom-text">
         <!-- 
             Icon created by Designmodo, under Creative Commons (Attribution 3.0 Unported) 
             URL: https://www.iconfinder.com/icons/102547/colors_document_edit_pen_pencil_write_icon#size=200 
         -->
-        <img src="app-assets/images/pencil-colors.png" width="30" height="30" class="d-inline-block align-top" alt=""> Taska
+        <img src="app-assets/images/pencil-colors.png" width="30" height="30" class="d-inline-block align-top">
+        Taska
     </span>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,18 +17,22 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="#">{{main.data.user}}</a>
             </li>
+            -->
         </ul>
-
+        
         <form class="form-inline my-2 my-lg-0">
-            <div class="form-group">
-                <button type="button" class="btn btn-primary rounded-circle add-button" data-toggle="modal" data-target="#newProjectForm">
-                    <span class="oi oi-plus"></span>
-                </button>
-                <select class="form-control bg-dark text-white" 
-                        ng-model="main.currentProject" 
+            <div class="input-group border-light">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-dark border-light" data-toggle="modal" data-target="#newProjectForm">
+                        <span class="oi oi-plus"></span>
+                    </button>
+                </div>
+                <select class="custom-select bg-dark text-white" 
+                        ng-model="main.currentProject"
                         ng-options="project as project.name for project in main.data.projects"
                         ng-change="main.getSelectedProject()">
                 </select>
@@ -36,5 +40,4 @@
         </form>
 
     </div>
-
 </nav>
