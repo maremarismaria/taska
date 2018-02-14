@@ -6,12 +6,20 @@
     app.controller('MainController', ['$http', function ($http){
         
         var main = this;
+
+        //All data from JSON file, after promise success
         main.data = [];
 
-        //current project and panels
+        //current project
         main.currentProject = [];
-        main.getPanelsFromSelectedProject = function() {
-            return main.currentProject.panels;
+        main.getSelectedProject = function() {
+            return main.currentProject;
+        };
+
+        //current panel
+        main.currentPanel = [];
+        main.getSelectedPanel = function(){
+            return main.currentPanel;
         };
 
         //new project
@@ -20,6 +28,8 @@
         main.addProject = function(){
             main.newProject.name = main.newProjectName;
             console.log(main.newProject);
+            main.data.projects.push(main.newProject);
+            main.newProject = { name : "", panels : [] };
         };
 
         //new panel
@@ -28,6 +38,8 @@
         main.addPanel = function(){
             main.newPanel.title = main.newPanelName;
             console.log(main.newPanel);
+            main.currentProject.panels.push(main.newPanel);
+            main.newPanel = { title : "", tasks : [] };
         };
 
         //new task
@@ -35,9 +47,23 @@
         main.newTask = { title : "", done : false };
         main.addTask = function(){
             main.newTask.title = main.newTaskTitle;
+            console.log(main.currentPanel);
             console.log(main.newTask);
+            main.currentPanel.tasks.push(main.newTask);
+            main.newTask = { title : "", done : false };
         }
-       
+
+        //edit panel
+        main.editPanel = function(panel){
+            console.log(panel);
+        }
+
+        //edit task
+        main.editTask = function(task){
+            console.log(task);
+        };
+        
+        //Retrieving data from JSON file
         $http.get("app-data/data.json")
 
             .success(function(data){

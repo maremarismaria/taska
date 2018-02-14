@@ -16,14 +16,17 @@
     <!-- Username & Available Projects -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="navbar-text">{{main.data.user}}</a>
+                <a class="nav-link" href="#">{{main.data.user}}</a>
             </li>
         </ul>
 
-        <form class="form-inline">
+        <form class="form-inline my-2 my-lg-0">
             <div class="form-group">
+                <button type="button" class="btn btn-primary rounded-circle add-button" data-toggle="modal" data-target="#newProjectForm">
+                    <span class="oi oi-plus"></span>
+                </button>
                 <select class="form-control bg-dark text-white" 
                         ng-model="main.currentProject" 
                         ng-options="project as project.name for project in main.data.projects"

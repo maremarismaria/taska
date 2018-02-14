@@ -6,24 +6,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles -->
     <link rel="stylesheet" href="app-assets/css/style.css">
+    <!-- "Open Iconic — www.useiconic.com/open" -->
+    <link href="app-assets/css/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
     <title>Taska</title>
 </head>
 <body ng-controller="MainController as main">
 
     <nav-bar></nav-bar>
-
+    
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2 lateral-nav">
-                <new-project></new-project>
-                <new-panel></new-panel>
-                <new-task></new-task>
-            </div>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <project-details></project-details>
             </div>
         </div>    
     </div>
+
+    <!-- Modals -->
+    <new-project></new-project>
+    <new-panel></new-panel>
+    <new-task></new-task>
     
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
