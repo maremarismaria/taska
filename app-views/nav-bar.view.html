@@ -32,9 +32,10 @@
                     </button>
                 </div>
                 <select class="custom-select bg-dark text-white" 
-                        ng-model="main.currentProject"
-                        ng-options="project as project.name for project in main.data.projects"
+                        ng-model="main.currentProject" 
+                        ng-options="project.id as project.name for project in main.projects"
                         ng-change="main.getSelectedProject()">
+                        <option class="first-option-select" value="">Projects</option>
                 </select>
             </div>
         </form>

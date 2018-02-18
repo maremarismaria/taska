@@ -5,10 +5,27 @@
 
     app.controller('MainController', ['$http', function ($http){
         
+        //WORKING WITH JSON SERVER
+        
         var main = this;
+        
+        //All data from JSON Server
+        main.projects = [];
 
-        //All data from JSON file, after promise success
-        main.data = [];
+        //Retrieving data from JSON Server
+        $http.get("http://localhost:3000/projects/")
+
+            .success(function(data){
+                main.projects = data;
+                console.log(main.projects)
+            })
+            
+            .error(function (error, status) {
+                var e = { message: error, status: status };
+                console.log( e.status );
+            });
+
+        //PROJECTS MANAGEMENT
 
         //current project
         main.currentProject = [];
@@ -16,6 +33,58 @@
             return main.currentProject;
         };
 
+        //new project
+        main.newProjectName = "";
+        main.addProject = function(){
+
+            if(main.newProjectName != ""){
+
+                var newData = JSON.stringify({
+                    "name":   main.newProjectName,
+                    "panels": []
+                });
+
+                var config = {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                };
+
+                $http.post("http://localhost:3000/projects/", newData, config)
+                
+                    .success(function(data){
+                        main.projects.push(data);
+                    })
+                    
+                    .error(function (error, status) {
+                        var e = { message: error, status: status };
+                        console.log( e.status );
+                    });
+
+            }
+        };
+
+
+        //WORKING WITH JSON FILE
+
+        //All data from JSON file, after promise success
+        main.data = [];
+
+        /*
+        //Retrieving data from JSON file
+        $http.get("app-data/data.json")
+
+            .success(function(data){
+                main.data = data;
+            })
+            
+            .error(function (error, status) {
+                var e = { message: error, status: status };
+                console.log( e.status );
+            });
+        */
+        
         //current panel
         main.currentPanel = [];
         main.setCurrentPanel = function (panel){
@@ -30,18 +99,6 @@
         //delete task
         main.deleteTask = function(panel, task){
             panel.tasks.splice(panel.tasks.indexOf(task), 1);
-        };
-
-        //new project
-        main.newProjectName = "";
-        main.newProject = { name : "", panels : [] };
-        main.addProject = function(){
-            if(main.newProjectName != ""){
-                main.newProject.name = main.newProjectName;
-                console.log(main.newProject);
-                main.data.projects.push(main.newProject);
-                main.newProject = { name : "", panels : [] };
-            }
         };
 
         //new panel
@@ -68,19 +125,6 @@
                 main.newTask = { title : "", done : false };
             }
         }
-
-        
-        //Retrieving data from JSON file
-        $http.get("app-data/data.json")
-
-            .success(function(data){
-                main.data = data;
-            })
-            
-            .error(function (error, status) {
-                var e = { message: error, status: status };
-                console.log( e.status );
-            });
 
     }]);
 
