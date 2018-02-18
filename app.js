@@ -22,6 +22,11 @@
             main.currentPanel = panel;
         }
 
+        //delete project
+        main.deleteProject = function(project){
+            main.data.projects.splice(main.data.projects.indexOf(project.name), 1);
+        }
+
         //delete panel
         main.deletePanel = function(panel){
             main.currentProject.panels.splice(main.currentProject.panels.indexOf(panel), 1);
@@ -117,6 +122,14 @@
         return {
             restrict : 'E',
             templateUrl : "app-views/project-details.view.html"
+        };
+    });
+
+    app.directive("editProject", function(){
+
+        return {
+            restrict : 'E',
+            templateUrl : "app-views/edit-project.view.html"
         };
     });
 

@@ -27,14 +27,21 @@
         <form class="form-inline my-2 my-lg-0">
             <div class="input-group border-light">
                 <div class="input-group-prepend">
-                    <button type="button" class="btn btn-dark border-light" data-toggle="modal" data-target="#newProjectForm">
+                    <button type="button" class="btn btn-dark border-light text-success" data-toggle="modal" data-target="#newProjectForm">
                         <span class="oi oi-plus"></span>
+                    </button>
+                    <button type="button" class="btn btn-dark border-light text-warning" data-toggle="modal" data-target="#editProject" ng-if="main.currentProject.name != undefined">
+                        <span class="oi oi-pencil"></span>
+                    </button>
+                    <button class="btn btn-dark border-light text-danger" type="button" ng-click="main.deleteProject(main.currentProject)" ng-if="main.currentProject.name != undefined">
+                        <span class="oi oi-trash"></span>
                     </button>
                 </div>
                 <select class="custom-select bg-dark text-white" 
                         ng-model="main.currentProject"
                         ng-options="project as project.name for project in main.data.projects"
                         ng-change="main.getSelectedProject()">
+                        <option class="first-option-select" value="">Projects</option>
                 </select>
             </div>
         </form>

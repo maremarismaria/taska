@@ -4,13 +4,18 @@
 
             <div class="card bg-light">
                 <div class="card-header bg-transparent">
-                    <span class="font-weight-bold">{{panel.title}}</span>
-                    <span class="font-weight-normal">({{panel.tasks.length}})</span>              
                     <span class="pull-right"> 
                         <button class="btn text-danger bg-transparent rounded-circle btn-sm" type="button" ng-click="main.deletePanel(panel)">
-                            <span class="oi oi-circle-x"></span>
+                            <span class="oi oi-trash"></span>
                         </button>
                     </span>
+                    <span>
+                        <input type="text" 
+                            class="border-0 bg-transparent font-weight-bold" 
+                            ng-model="panel.title" 
+                            value="{{panel.title}}">
+                    </span>
+                    <span class="font-weight-bold">({{panel.tasks.length}})</span>              
                 </div>
                 
                 <div class="card-body">
@@ -48,7 +53,7 @@
             </div>
 
         </div>
-        <div class="col-sm m-2">
+        <div class="col-sm m-2" ng-if="main.currentProject.name != undefined">
             <button type="button" class="btn btn-dark btn-sm rounded-circle add-button" data-toggle="modal" data-target="#newPanelForm">
                 <span class="oi oi-plus"></span>
             </button>

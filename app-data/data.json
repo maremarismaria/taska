@@ -21,7 +21,7 @@
                         },
                         {
                             "title" : "Cry using AngularJS",
-                            "done" : false
+                            "done" : true
                         }
                     ]
                 },
@@ -52,6 +52,10 @@
 
                         {
                             "title" : "Use a Bootstrap Modal",
+                            "done" : true
+                        },
+                        {
+                            "title" : "Do 'git revert HEAD'",
                             "done" : true
                         }
                     ]
