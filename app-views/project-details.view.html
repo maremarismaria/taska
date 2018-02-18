@@ -1,8 +1,6 @@
 <div class="container-fluid">
     <div class="row p-2">
-        <div class="col-lg-3 m-2" 
-                ng-repeat="panel in main.projects[main.getSelectedProject()].panels" 
-                ng-if="main.projects[main.getSelectedProject()].panels.length > 0">
+        <div class="col-lg-3 m-2" ng-repeat="panel in main.getSelectedProject().panels" ng-if="main.getSelectedProject().panels.length > 0">
 
             <div class="card bg-light">
                 <div class="card-header bg-transparent">
@@ -57,5 +55,5 @@
         </div>
     </div>
 </div>
-<p>{{main.currentProject}}</p>
+
 
