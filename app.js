@@ -133,13 +133,4 @@
         };
     });
 
-
-    //not in use
-    app.directive("login", function(){
-        return {
-            restrict : 'E',
-            templateUrl : "app-views/login.view.html"
-        };
-    });   
-
 })();
