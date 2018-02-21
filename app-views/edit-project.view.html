@@ -11,7 +11,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Change name:</label>
-                    <input type="text" class="form-control" ng-model="main.currentProject.name" value="{{main.currentProject.name}}">
+                    <input type="text" class="form-control" ng-model="main.currentProject.name" value="{{main.currentProject.name}}" ng-change="main.updateProjectName()">
                 </div>
             </div>
         </form>
